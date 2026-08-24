@@ -151,4 +151,4 @@ This repository is **Part 1 of 3** in the Cloud-Native End-to-End Platform serie
 
 1. **`01-platform-infra-terraform`** *(This repository)* — Provisioning base cloud infrastructure (VPC, GKE Private, Cloud SQL, Artifact Registry).
 2. [**`02-platform-gitops-config`**](https://github.com/vladimir-evdokimov-pro/02-platform-gitops-config) — GitOps engine, Kubernetes controllers & cluster configuration (ArgoCD, Ingress, Cert-Manager).
-3. [**`03-sample-app-microservice`**]([../03-sample-app-microservice](https://github.com/vladimir-evdokimov-pro/03-sample-app-microservice)) — Microservice application workloads and deployment manifests.
+3. [**`03-sample-app-microservice`**](https://github.com/vladimir-evdokimov-pro/03-sample-app-microservice) — Microservice application workloads and deployment manifests.
