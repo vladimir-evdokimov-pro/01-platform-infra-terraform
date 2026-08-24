@@ -142,3 +142,13 @@ gcloud container clusters get-credentials $(terraform output -raw cluster_name) 
     --region $(terraform output -raw region) \
     --project $(terraform output -raw project_id)
 ```
+
+---
+
+## Platform Ecosystem
+
+This repository is **Part 1 of 3** in the Cloud-Native End-to-End Platform series:
+
+1. **`01-platform-infra-terraform`** *(This repository)* — Provisioning base cloud infrastructure (VPC, GKE Private, Cloud SQL, Artifact Registry).
+2. [**`02-platform-gitops-config`**](../02-platform-gitops-config) — GitOps engine, Kubernetes controllers & cluster configuration (ArgoCD, Ingress, Cert-Manager).
+3. [**`03-sample-app-microservice`**](../03-sample-app-microservice) — Microservice application workloads and deployment manifests.
