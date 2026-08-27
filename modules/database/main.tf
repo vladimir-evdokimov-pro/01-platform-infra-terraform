@@ -17,7 +17,7 @@ resource "google_sql_database_instance" "bdd" {
         allowed_consumer_projects = [var.project_id]
       }
       ipv4_enabled = false
-      ssl_mode = "ENCRYPTED_ONLY"
+      ssl_mode     = "ENCRYPTED_ONLY"
     }
     availability_type = "REGIONAL"
 

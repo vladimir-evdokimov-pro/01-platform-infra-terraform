@@ -42,3 +42,20 @@ terraform.rc
 # Optional: ignore plan files saved before destroying Terraform configuration
 # Uncomment the line below if you want to ignore planout files.
 # planout
+
+# macOS system files
+.DS_Store
+
+# IDE configuration
+.idea/
+.vscode/
+
+# Terraform plan outputs (contain sensitive values)
+*.tfplan
+tfplan*
+
+# Local environment & GCP keys
+.env
+*credentials*.json
+*-key.json
+*.pem

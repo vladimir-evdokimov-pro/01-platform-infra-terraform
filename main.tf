@@ -6,6 +6,13 @@ resource "google_project_service" "apis" {
   disable_on_destroy = false
 }
 
+module "wif" {
+  source = "./modules/iam"
+
+  project_id      = var.project_id
+  github_username = var.github_username
+}
+
 module "network" {
   source = "./modules/vpc"
 
@@ -25,7 +32,7 @@ module "security" {
   project_id = var.project_id
   vpc_id     = module.network.vpc_id
 
-  depends_on = [ google_project_service.apis ]
+  depends_on = [google_project_service.apis]
 }
 
 module "gke" {
@@ -37,7 +44,7 @@ module "gke" {
   subnet_id  = module.network.subnet_id
   sa         = module.security.gke_sa_email
 
-  depends_on = [ google_project_service.apis ]
+  depends_on = [google_project_service.apis]
 }
 
 module "database" {
@@ -48,5 +55,5 @@ module "database" {
   vpc_id     = module.network.vpc_id
   subnet_id  = module.network.subnet_id
 
-  depends_on = [ google_project_service.apis ]
+  depends_on = [google_project_service.apis]
 }

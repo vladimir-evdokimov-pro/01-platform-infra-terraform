@@ -13,6 +13,11 @@ variable "zone" {
   type        = string
 }
 
+variable "github_username" {
+  description = "GitHub username or organization name"
+  type        = string
+}
+
 variable "gcp_apis" {
   description = "List of APIs to enable for realize this configuration"
   type        = set(string)
