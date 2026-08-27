@@ -1,3 +1,10 @@
+output "gcp_workload_identity_provider" {
+  value = module.wif.workload_identity_pool_provider
+}
+
+output "gcp_service_account_email" {
+  value = module.wif.service_account_mail
+}
 output "cluster_name" {
   description = "The name of the created GKE cluster"
   value       = module.gke.cluster_name
