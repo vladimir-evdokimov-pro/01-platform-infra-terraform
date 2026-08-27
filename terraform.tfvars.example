@@ -3,6 +3,8 @@ project_id = "YOUR_PROJECT"
 region = "europe-west9"
 zone   = "europe-west9-a"
 
+github_username = "github organization"
+
 variable "gcp_apis" {
   description = "List of APIs to enable for realize this configuration"
   type        = set(string)
